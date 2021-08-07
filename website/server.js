@@ -4,7 +4,7 @@ const io   = require('socket.io')
 const express = require("express");
 const partials      = require('express-partials');
 const EJSLayout = require('express-ejs-layouts');
-
+const port = process.env.port;
 const http=require('http');
 const app = express(); // create express app
 const server = http.createServer(app);
@@ -97,6 +97,6 @@ app.get("/api/ntf/:id", (req, res) => {
 });
 
 // start express server on port 5000
-app.listen(5000, () => {
-  console.log("server started on port 5000");
+app.listen(port > 0 ? port : 5000, () => {
+  console.log("server started on  "+port);
 });
