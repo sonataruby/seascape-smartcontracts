@@ -8,6 +8,9 @@
   },
   "scripts": {
     "lint:sol": "node_modules/.bin/solium -d contracts/",
+    "test:bsc": "truffle test ./test/lp_mining.js --network bsc_testnet",
+    "compile:bsc-testnet": "truffle compile --reset --network bsc_testnet",
+    "migrate:bsc-testnet": "truffle migrate --reset --network bsc_testnet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,13 +21,14 @@
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.20.0",
-    "@truffle/hdwallet-provider": "^1.3.1",
+    "@truffle/hdwallet-provider": "^1.2.3",
     "bignumber.js": "^9.0.1",
     "chai": "^4.3.4",
     "command-line-args": "^5.1.1",
     "dotenv": "^8.6.0",
     "keytar": "^7.7.0",
     "mysql": "^2.18.1",
+    "truffle-hdwallet-provider": "^1.0.17",
     "truffle-privatekey-provider": "^1.5.0"
   }
 }

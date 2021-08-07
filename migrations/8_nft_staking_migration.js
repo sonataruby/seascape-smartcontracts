@@ -5,7 +5,7 @@ var Nft = artifacts.require("./SeascapeNft.sol");
 
 
 module.exports = async function(deployer, network) {
-    if (network == "development") {
+    if (network == "bsc_testnet") {
 		deployer.deploy(NftStaking, Crowns.address, Factory.address, Nft.address).then(function(){
 	    	console.log("Staking contract was deployed at address: "+NftStaking.address);
 	    	console.log("It is using Crowns (CWS) Token at address: "+Crowns.address);
@@ -20,9 +20,9 @@ module.exports = async function(deployer, network) {
 	    	console.log("Staking Saloon contract was deployed at address: "+NftStaking.address);
 		});
     } else {
-		let crowns = "0xbcf39F0EDDa668C58371E519AF37CA705f2bFcbd";
-		let factory = "0xa304D289f6d0a30aEB33e9243f47Efa3a9ad437d";
-		let nft = "0xc54b96b04AA8828b63Cf250408E1084E9F6Ac6c8";
+		let crowns = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
+		let factory = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
+		let nft = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
 
 		let gasPrice = await web3.eth.getGasPrice() * 1.3;
 		let gasValue = 4700000;	    

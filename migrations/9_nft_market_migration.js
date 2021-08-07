@@ -18,12 +18,12 @@ module.exports = function(deployer, network) {
             console.log("Market contract was deployed at address: "+NftMarket.address);
         });
       }
-      else if (network == "rinkeby") {
-          var feesReciever = "0x5bDed8f6BdAE766C361EDaE25c5DC966BCaF8f43";
+      else if (network == "bsc_testnet") {
+          var feesReciever = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
 
           deployer.deploy(NftMarket, feesReciever, tipsFeeRate)
            .then(function(){
-              console.log("Market contract was deployed at address: "+NftMarket.address);
+              console.log("Log, Market contract was deployed at address: "+NftMarket.address);
           });
         }
 };
