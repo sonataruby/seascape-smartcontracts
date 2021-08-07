@@ -77,7 +77,7 @@ app.get('/auth/:MetaMessage/:MetaSignature', metaAuth, (req, res) => {
     res.status(400).send();
   };
 });
-
+/*
 app.get('/api/:file', (req, res) => {
 
     fs.readFile( __dirname +'/api/' + req.params.file + ".json", 'utf8', function (err, data) {
@@ -86,12 +86,13 @@ app.get('/api/:file', (req, res) => {
     });
 
 });
-app.get("/api/nft/:id", (req, res) => {
-
-    fs.readFile( __dirname +'/api/' + req.params.file + ".json", 'utf8', function (err, data) {
-        res.send(data);
-        res.end( data );
-    });
+*/
+app.get("/api/ntf/:id", (req, res) => {
+	res.header('Content-Type', 'application/json');
+	const data = readJSONFile('ntf.json');
+    
+    res.send(JSON.stringify(data[req.params.id]));
+    res.end( data );
 
 });
 
