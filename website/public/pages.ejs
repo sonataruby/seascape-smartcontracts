@@ -248,70 +248,7 @@
 	<script src="assets/js/scripts.js?ver=1930"></script>
 	<script src="assets/js/charts.js?ver=1930"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
-    <script type="text/javascript">
-         window.addEventListener('load', async() => {
-            if (window.web3) {
-                window.web3 = new Web3(web3.currentProvider)
-               
-            }
-         });
-        let challenge = null;
-        let signature = null;
-          if (web3) {
-            console.log("web3");
-          } else {
-            alert("No web3 detected. Please install metamask");
-          }
-
-          $('.get').on('click', function () {
-            $('.challenge').empty();
-            $.get('/auth/' + web3.eth.accounts[0], (res) => {
-              challenge = res
-
-              console.log(res)
-
-              res.forEach(line => {
-                $('.challenge').append(line.name);
-                $('.challenge').append('<br>');
-                $('.challenge').append(line.value);
-                $('.challenge').append('<br>');
-              })
-
-
-              const from = web3.eth.accounts[0];
-
-              const params = [challenge, from];
-              const method = 'eth_signTypedData';
-
-              web3.currentProvider.sendAsync({
-                method,
-                params,
-                from
-              }, async (err, result) => {
-                signature = result.result;
-                if (err) {
-                  return console.error(err);
-                }
-                if (result.error) {
-                  return console.error(result.error);
-                }
-                $('.signature').text(signature);
-              });
-            });
-          });
-
-          $('.verify').on('click', function() {
-            $.get('/auth/' + challenge[1].value + '/' + signature, (res) => {
-              if (res === web3.eth.accounts[0]) {
-                $('.success').show();
-              } else {
-                $('.fail').show();
-              }
-            });
-          });
-
-
-        </script>
+    <script src="assets/js/apps.js?ver=1930"></script>
 </body>
 
 </html>

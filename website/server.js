@@ -9,6 +9,7 @@ const http=require('http');
 const app = express(); // create express app
 const server = http.createServer(app);
 const ejs = require('ejs');
+const session = require('express-session')
 
 const MetaAuth = require('meta-auth');
 const metaAuth = new MetaAuth();
@@ -24,6 +25,7 @@ app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs');
 //app.use(partials());
 app.use(EJSLayout);
+
 app.get("/", (req, res) => {
  app.set('layout', './home')
  const dataMain = readJSONFile('main.json');
@@ -97,6 +99,6 @@ app.get("/api/ntf/:id", (req, res) => {
 });
 
 // start express server on port 5000
-app.listen(port > 0 ? port : 5000, () => {
-  console.log("server started on  "+port);
+app.listen(5000, () => {
+  console.log("server started on  5000");
 });

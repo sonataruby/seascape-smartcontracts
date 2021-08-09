@@ -1,7 +1,7 @@
 /*!
  * Toastr - ICOCrypto v1.9.3 by Softnio.
 **/
-NioApp = (function (NioApp, $, window) {
+SmartApps = (function (SmartApps, $, window) {
     "use strict";
     
 	var $toastr_top_center = $('.toastr-top-center'),
@@ -17,10 +17,10 @@ NioApp = (function (NioApp, $, window) {
         $toastr_warning = $('.toastr-warning'),
         $toastr_error = $('.toastr-error');
     
-	NioApp.Toastr = {};
+	SmartApps.Toastr = {};
 	
 	// ToastrJs @v1.0
-    NioApp.Toastr.ToastrJs = function () {
+    SmartApps.Toastr.ToastrJs = function () {
         if ($toastr_top_center.exists()) {
 			$toastr_top_center.each(function(){
 				var $self = $(this);
@@ -263,7 +263,7 @@ NioApp = (function (NioApp, $, window) {
         }
 	};
 	
-    NioApp.components.docReady.push(NioApp.Toastr.ToastrJs);
-	return NioApp;
-})(NioApp, jQuery, window);
+    SmartApps.components.docReady.push(SmartApps.Toastr.ToastrJs);
+	return SmartApps;
+})(SmartApps, jQuery, window);
     

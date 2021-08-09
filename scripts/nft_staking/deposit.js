@@ -24,9 +24,9 @@ module.exports = async function(callback) {
 let init = async function(networkId) {
     accounts = await web3.eth.getAccounts();
 
-    let nftStaking = await NftStaking.at("0xa00D12B9f774F0Cd4F6DA48876C686A0C825B3e5");
+    let nftStaking = await NftStaking.at("0xd14a907B3c94f54af78305Cf9f29A0bC44Aae48b");
 
-    let nft     = await Nft.at("0x7115ABcCa5f0702E177f172C1c14b3F686d6A63a");
+    let nft     = await Nft.at("0x66D698881b8E650FC08f1e96EbBb9Ad2e7f8408b");
 
     let lastSessionId = await nftStaking.lastSessionId();
     console.log(lastSessionId);
@@ -42,7 +42,7 @@ let deposit = async function(nftStaking, nft, lastSessionId) {
 //     await approve(nft, player, nftStaking.address);
 //
 //     // nft to deposit
-    let walletAddress = "0x5bDed8f6BdAE766C361EDaE25c5DC966BCaF8f43";
+    let walletAddress = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
     let nftId = await getFirstNft(nft, walletAddress);
 //     if (nftId === 0) {
 // 	console.error("No Nft was found for wallet address: "+player);
@@ -129,7 +129,7 @@ let getFirstNft = async function(nft, walletAddress) {
     let nftId = await nft.tokenOfOwnerByIndex(walletAddress, 0);
     nftId = parseInt(nftId);
     let sp = 100;
-    let nftStaking = await NftStaking.at("0xa00D12B9f774F0Cd4F6DA48876C686A0C825B3e5");
+    let nftStaking = await NftStaking.at("0xd14a907B3c94f54af78305Cf9f29A0bC44Aae48b");
 
     console.log("nftId: ",nftId);
 

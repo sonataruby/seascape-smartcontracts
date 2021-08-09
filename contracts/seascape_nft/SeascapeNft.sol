@@ -36,8 +36,9 @@ contract SeascapeNft is ERC721, ERC721Burnable, Ownable {
      * Mints all tokens.
      * Transfers ownership to another account. So, the token creator will not be counted as an owner.
      */
-    constructor() public ERC721("Seascape NFT", "SCAPES") {
+    constructor() public ERC721("v3Smart NFT", "v3NTF") {
 	tokenId.increment(); // set to 1 the incrementor, so first token will be with id 1.
+    _setBaseURI("http://167.179.83.185/api/ntf/");
     }
 
     modifier onlyFactory() {

@@ -5,6 +5,7 @@ let Nft = artifacts.require("SeascapeNft");
 let Factory = artifacts.require("NftFactory");
 let Staking = artifacts.require("LpMining");
 let NftStaking = artifacts.require("NftStaking");
+let NftMarket = artifacts.require("NftMarket");
 
 module.exports = async function(callback) {
     let accounts = await web3.eth.getAccounts();
@@ -42,6 +43,11 @@ let init = async function() {
     
     let nftStaking = await NftStaking.deployed();
     console.log("Nft Staking: "+nftStaking.address);
+    
+    let nftMarket = await NftMarket.deployed();
+    console.log("Nft Market: "+NftMarket.address);
+
+    
 
     return true;
 }.bind(this);

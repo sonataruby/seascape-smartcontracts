@@ -25,10 +25,10 @@ module.exports = async function(deployer, network) {
         await deployer.deploy(NftBurning, crowns, factory, nft);
         console.log("NftBurning contract was deployed at address: "+NftBurning.address);
     }
-    else if (network == "bsctestnet") {
-        var crowns = "0x4Ca0ACab9f6B9C084d216F40963c070Eef95033B";
-        var factory = "0x3eB88c3F2A719369320D731FbaE062b0f82F22e4";
-        var nft = "0x66638F4970C2ae63773946906922c07a583b6069";
+    else if (network == "bsc_testnet") {
+        var crowns = "0x9F65b1721c18FB1591058F77508Cbe32492e4D7f";
+        var factory = "0x2651c8E1958c18B7457aBE89c8FA8788fDdb40D6";
+        var nft = "0x66D698881b8E650FC08f1e96EbBb9Ad2e7f8408b";
 
         await deployer.deploy(NftBurning, crowns, factory, nft);
         console.log("NftBurning contract was deployed at address: "+NftBurning.address);

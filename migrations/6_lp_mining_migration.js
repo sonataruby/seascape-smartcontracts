@@ -6,9 +6,10 @@ module.exports = async function(deployer, network) {
 	let crowns;
 	let factory;
 
-    if (network == "development") {
+    if (network == "bsc_testnet") {
 		crowns = Crowns.address;
 		factory = NftFactory.address;
+		console.log("Nhan text Nextwork");
     } else if (network == "rinkeby") {
 		crowns = "0x168840df293413a930d3d40bab6e1cd8f406719d";
 		factory = "0xF06CF016b6DAdED5f676EE6340fc7398CA2142b0";

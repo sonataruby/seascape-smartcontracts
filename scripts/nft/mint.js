@@ -2,8 +2,8 @@ let Factory = artifacts.require("NftFactory");
 let Nft = artifacts.require("SeascapeNft");
 
 // rinkeby testnet
-let factoryAddress = '0x3eB88c3F2A719369320D731FbaE062b0f82F22e4';
-let nftAddress = '0x66638F4970C2ae63773946906922c07a583b6069';
+let factoryAddress = '0x2651c8E1958c18B7457aBE89c8FA8788fDdb40D6';
+let nftAddress = '0x66D698881b8E650FC08f1e96EbBb9Ad2e7f8408b';
 
 module.exports = async function(callback) {
     const networkId = await web3.eth.net.getId();

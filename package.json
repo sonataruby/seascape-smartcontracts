@@ -9,8 +9,8 @@
   "scripts": {
     "lint:sol": "node_modules/.bin/solium -d contracts/",
     "test:bsc": "truffle test ./test/lp_mining.js --network bsc_testnet",
-    "compile:bsc-testnet": "truffle compile --reset --network bsc_testnet",
-    "migrate:bsc-testnet": "truffle migrate --reset --network bsc_testnet",
+    "compile:bsc-testnet": "truffle compile --network bsc_testnet",
+    "migrate:bsc-testnet": "truffle migrate --network bsc_testnet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

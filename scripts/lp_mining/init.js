@@ -23,10 +23,10 @@ let init = async function(networkId) {
     accounts = await web3.eth.getAccounts();
     console.log(accounts)
 
-	let lpMining        = await LpMining.at("0xa35abb86c53695bb1b23b55808b6c5871432c22c");
-	let factory         = await Factory.at("0x25F4C38FAF75dF9622FECB17Fa830278cd732091");
-	let crowns          = await Crowns.at("0xac0104cca91d167873b8601d2e71eb3d4d8c33e0");	
-    let lpTokenAddress  = "0xac0104cca91d167873b8601d2e71eb3d4d8c33e0";
+	let lpMining        = await LpMining.at("0xBAe84dBB9f0A21c38BceaeA6d5f28f9CE41892c3");
+	let factory         = await Factory.at("0x2651c8E1958c18B7457aBE89c8FA8788fDdb40D6");
+	let crowns          = await Crowns.at("0x9F65b1721c18FB1591058F77508Cbe32492e4D7f");	
+    let lpTokenAddress  = "0xBAe84dBB9f0A21c38BceaeA6d5f28f9CE41892c3";
 
     console.log("Set the contracts");
 

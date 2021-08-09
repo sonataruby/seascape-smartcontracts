@@ -14,7 +14,7 @@ if (process.env.NFT_RUSH_MAX_DEPOSIT !== undefined) {
 
 
 module.exports = function(deployer, network) {
-    if (network == "development") {
+    if (network == "bsc_testnet") {
 		deployer.deploy(NftRush, Crowns.address, Factory.address, minDeposit, maxDeposit).then(function(){
 	    	console.log("Nft Brawl contract was deployed at address: "+NftRush.address);
 		});

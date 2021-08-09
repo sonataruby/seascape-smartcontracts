@@ -19,7 +19,7 @@ module.exports = function(deployer, network) {
         });
       }
       else if (network == "bsc_testnet") {
-          var feesReciever = "0x4D4e02a7bd99B69fB8d349632a73b7a852A99aa4";
+          var feesReciever = "0x77732a57F6Dd9D6a61d1052831755e513214061b";
 
           deployer.deploy(NftMarket, feesReciever, tipsFeeRate)
            .then(function(){

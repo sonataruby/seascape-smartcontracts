@@ -1,18 +1,18 @@
 /*!
  * Charts - ICOCrypto v1.9.3 by Softnio.
 **/
-NioApp = (function (NioApp, $, window) {
+SmartApps = (function (SmartApps, $, window) {
     "use strict";
 	var $chart = $('.chart-data'), $chart_s2 = $('.chart-data-s2'), $chart_s1 = $('.chart-data-s1');
     
-	NioApp.Chart = {};
+	SmartApps.Chart = {};
 	
     var $win		= $(window);
     
 	// ChartsJS @v1.0
-    NioApp.Chart.ChartJs = function () {
+    SmartApps.Chart.ChartJs = function () {
         
-        NioApp.Chart.ChartJs.Doughnut = function (_canvas, _titles, _colors, _amounts, _canvas_border, _canvas_cutout) {
+        SmartApps.Chart.ChartJs.Doughnut = function (_canvas, _titles, _colors, _amounts, _canvas_border, _canvas_cutout) {
             if ($('#'+_canvas).length) {
                 var _canvas_el = document.getElementById(_canvas).getContext("2d");
                 var doughnut_chart = new Chart(_canvas_el, {
@@ -74,7 +74,7 @@ NioApp = (function (NioApp, $, window) {
         
 
         
-        NioApp.Chart.ChartJs.Doughnut2 = function (_canvas, _titles, _colors, _amounts, _canvas_border, _canvas_cutout) {
+        SmartApps.Chart.ChartJs.Doughnut2 = function (_canvas, _titles, _colors, _amounts, _canvas_border, _canvas_cutout) {
             if ($('#'+_canvas).length) {
                 var _canvas_el = document.getElementById(_canvas).getContext("2d");
                 var doughnut_chart = new Chart(_canvas_el, {
@@ -146,7 +146,7 @@ NioApp = (function (NioApp, $, window) {
         }
         
         // @since v1.6
-        NioApp.Chart.ChartJs.Pie = function (_canvas, _label, _title, _colors, _colors_hover, _amounts, _canvas_border, _canvas_cutout) {
+        SmartApps.Chart.ChartJs.Pie = function (_canvas, _label, _title, _colors, _colors_hover, _amounts, _canvas_border, _canvas_cutout) {
             if ($('#'+_canvas).length) {
                 var _canvas_el = document.getElementById(_canvas).getContext("2d");
                 
@@ -233,11 +233,11 @@ NioApp = (function (NioApp, $, window) {
                         $(this).html('<span class="chart-c" style="background-color: ' + c + '"></span><span class="chart-l">' + l + '</span><span class="chart-p">' + p +'%</span>')
                     });
                     if (_canvas_type==='doughnut') {
-                        NioApp.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent,_canvas_border,_canvas_cutout);
+                        SmartApps.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent,_canvas_border,_canvas_cutout);
                     } else if(_canvas_type==='pie') {
-                        NioApp.Chart.ChartJs.Pie(_canvas, item_label, item_color, item_percent,_canvas_border);
+                        SmartApps.Chart.ChartJs.Pie(_canvas, item_label, item_color, item_percent,_canvas_border);
                     } else if(_canvas_type==='linechart') {
-                        NioApp.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent,_canvas_border);
+                        SmartApps.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent,_canvas_border);
                     }
                 } else {
                     console.log('Unable to draw canvas: '+_canvas);
@@ -261,11 +261,11 @@ NioApp = (function (NioApp, $, window) {
                         $(this).html('<div class="chart-data-item"><span class="chart-label">' + t + '</span><span class="chart-info"><span class="chart-percent">' + p +'% </span><span class="chart-sublabel">' + sl + '</span></span></div>')
                     });
                     if (_canvas_type==='doughnut') {
-                        NioApp.Chart.ChartJs.Doughnut(_canvas, item_label, item_title, item_color, item_percent, _canvas_border,_canvas_cutout);
+                        SmartApps.Chart.ChartJs.Doughnut(_canvas, item_label, item_title, item_color, item_percent, _canvas_border,_canvas_cutout);
                     } else if(_canvas_type==='pie') {
-                        NioApp.Chart.ChartJs.Pie(_canvas, item_label, item_title, item_color, item_color_hover, item_percent, _canvas_border);
+                        SmartApps.Chart.ChartJs.Pie(_canvas, item_label, item_title, item_color, item_color_hover, item_percent, _canvas_border);
                     } else if(_canvas_type==='linechart') {
-                        NioApp.Chart.ChartJs.Doughnut(_canvas, item_label, item_title, item_color, item_percent, _canvas_border);
+                        SmartApps.Chart.ChartJs.Doughnut(_canvas, item_label, item_title, item_color, item_percent, _canvas_border);
                     }
                 } else {
                     console.log('Unable to draw canvas: '+_canvas);
@@ -291,11 +291,11 @@ NioApp = (function (NioApp, $, window) {
                         $chart_data.eq(i-1).addClass('chart-index-'+i);
                     }
                     if (_canvas_type==='doughnut') {
-                        NioApp.Chart.ChartJs.Doughnut2(_canvas, item_label, item_color, item_percent, _canvas_border,_canvas_cutout);
+                        SmartApps.Chart.ChartJs.Doughnut2(_canvas, item_label, item_color, item_percent, _canvas_border,_canvas_cutout);
                     } else if(_canvas_type==='pie') {
-                        NioApp.Chart.ChartJs.Pie(_canvas, item_label, item_color, item_color_hover, item_percent, _canvas_border);
+                        SmartApps.Chart.ChartJs.Pie(_canvas, item_label, item_color, item_color_hover, item_percent, _canvas_border);
                     } else if(_canvas_type==='linechart') {
-                        NioApp.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent, _canvas_border);
+                        SmartApps.Chart.ChartJs.Doughnut(_canvas, item_label, item_color, item_percent, _canvas_border);
                     }
                 } else {
                     console.log('Unable to draw canvas: '+_canvas);
@@ -303,6 +303,6 @@ NioApp = (function (NioApp, $, window) {
             });
         } 
 	};
-    NioApp.components.docReady.push(NioApp.Chart.ChartJs);
-	return NioApp;
-})(NioApp, jQuery, window);
+    SmartApps.components.docReady.push(SmartApps.Chart.ChartJs);
+	return SmartApps;
+})(SmartApps, jQuery, window);

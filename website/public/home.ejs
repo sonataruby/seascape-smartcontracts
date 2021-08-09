@@ -81,8 +81,8 @@
                                             <li><a href="#">Hindi</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="<%- token.sell_link %>" class="btn btn-md btn-round btn-outline btn-auto btn-primary"><span>Join Pre-sale</span></a></li>
-                                    <li><a href="<%- token.buy_link %>" class="btn btn-md btn-round btn-outline btn-auto btn-primary"><span>Buy Token</span></a></li>
+                                    <li><a class="btn btn-md btn-round btn-outline btn-auto btn-primary walletLimit"  data-toggle="modal" data-target="#ModalWallet"><span id="walletAddress">Join Pre-sale</span></a></li>
+                                    <li><a  class="btn btn-md btn-round btn-outline btn-auto btn-primary" id="btnBuyToken"><span>Buy Token</span></a></li>
                                 </ul>
                             </nav>
                         </div><!-- .header-navbar @e -->
@@ -264,10 +264,33 @@
 	
 	<div class="preloader"><span class="spinner spinner-round"></span></div>
 	
+<!-- Modal -->
+<div class="modal fade" id="ModalWallet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+            <div id="btnWalletConnect"><img src="https://miro.medium.com/max/797/0*maYCNWMWVjyEJU7r" style="width: 100%;"></div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 	<!-- JavaScript -->
-	<script src="assets/js/jquery.bundle.js?ver=1930"></script>
-	<script src="assets/js/scripts.js?ver=1930"></script>
-	<script src="assets/js/charts.js?ver=1930"></script>
+	<script src="/assets/js/jquery.bundle.js?ver=1930"></script>
+	<script src="/assets/js/scripts.js?ver=1930"></script>
+    
+	<script src="/assets/js/charts.js?ver=1930"></script>
+   
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <script src="/assets/js/web3setup.js?ver=1930"></script>
+    <script type="text/javascript"  src="/assets/js/apps.js?ver=1930"></script>
+    
 </body>
 
 </html>

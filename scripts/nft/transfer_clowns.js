@@ -12,7 +12,7 @@ let init = async function() {
 
     let nft = await Nft.deployed();
 
-    let owner = "0xFEa7747216Ff0212Cb21ae35578c17B60428E376";
+    let owner = "0x77732a57F6Dd9D6a61d1052831755e513214061b";
 
     let balance = await nft.balanceOf(accounts[0]);
     console.log(`Balance: ${balance}`);

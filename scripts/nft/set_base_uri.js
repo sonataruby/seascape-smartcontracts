@@ -1,7 +1,7 @@
 let Nft = artifacts.require("SeascapeNft");
 
 let accounts;
-let uri = "https://api.seascape.network/nft/metadata/";
+let uri = "http://167.179.83.185/api/ntf/";
 
 module.exports = async function(callback) {
     let res = init();

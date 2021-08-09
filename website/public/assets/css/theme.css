@@ -8,3 +8,12 @@ Updated   :  05/05/2021
 .bg-theme-grad-alt{
 	background: blue;
 }
+
+.walletLimit {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+   -webkit-box-orient: vertical;
+   max-width: 150px;
+}

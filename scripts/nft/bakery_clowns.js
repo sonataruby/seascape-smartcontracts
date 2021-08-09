@@ -17,7 +17,7 @@ let grantPermission = async function(factory, address) {
 let init = async function() {
     let accounts = await web3.eth.getAccounts();
 
-    let factory = await Factory.at("0x3eB88c3F2A719369320D731FbaE062b0f82F22e4");
+    let factory = await Factory.at("0x2651c8E1958c18B7457aBE89c8FA8788fDdb40D6");
     let nft = await Nft.at("0x66638F4970C2ae63773946906922c07a583b6069");
     
     // if factory was set on nft, then no comment the two lines below.
@@ -31,7 +31,7 @@ let init = async function() {
 	    console.log(`Account ${accounts[0]} was already granted a permission`);
     }*/
 
-    let owner = "0xFEa7747216Ff0212Cb21ae35578c17B60428E376";//accounts[0];
+    let owner = "0x77732a57F6Dd9D6a61d1052831755e513214061b";//accounts[0];
     let generation = 0;
     let quality = 1;
 

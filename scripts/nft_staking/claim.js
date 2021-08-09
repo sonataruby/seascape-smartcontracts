@@ -36,6 +36,7 @@ let claim = async function(nftStaking, lastSessionId) {
     let args = process.argv.slice(4);
     if (args.length == 1) {
 	slotIndex = parseInt(args[0]);
+    
 	if (slotIndex < 0 || slotIndex > 2) {
 	    throw "Slot index should be between 0 and 2";
 	    process.exit(1);

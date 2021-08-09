@@ -15,7 +15,7 @@ contract LpToken is ERC20, Ownable {
      * Mints all tokens.
      * Transfers ownership to another account. So, the token creator will not be counted as an owner.
      */
-    constructor() public ERC20("LP CWS Test", "LPT") {
+    constructor() public ERC20("LP vSmart v3", "LPTP") {
         uint256 supply        = 1e7 * (10 ** 18);
    
         _mint(_msgSender(),       supply);
